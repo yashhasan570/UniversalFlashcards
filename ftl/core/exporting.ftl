@@ -1,0 +1,45 @@
+exporting-all-decks = All Decks
+exporting-universalflashcards-20-deck = Universal Flashcards 2.0 Deck
+exporting-universalflashcards-collection-package = Universal Flashcards Collection Package
+exporting-universalflashcards-deck-package = Universal Flashcards Deck Package
+exporting-cards-in-plain-text = Cards in Plain Text
+# used in the filename during the export of a collection package
+exporting-collection = collection
+exporting-collection-exported = Collection exported.
+exporting-colpkg-too-new = Please update to the latest Universal Flashcards version, then import the .colpkg/.apkg file again.
+exporting-couldnt-save-file = Couldn't save file: { $val }
+exporting-export = Export...
+exporting-export-format = <b>Export format</b>:
+exporting-include = <b>Include</b>:
+exporting-include-html-and-media-references = Include HTML and media references
+exporting-include-media = Include media
+exporting-include-scheduling-information = Include scheduling information
+exporting-include-deck-configs = Include deck presets
+exporting-include-tags = Include tags
+exporting-support-older-universalflashcards-versions = Support older Universal Flashcards versions (slower/larger files)
+exporting-notes-in-plain-text = Notes in Plain Text
+exporting-selected-notes = Selected Notes
+exporting-card-exported =
+    { $count ->
+        [one] { $count } card exported.
+       *[other] { $count } cards exported.
+    }
+exporting-exported-media-file =
+    { $count ->
+        [one] Exported { $count } media file
+       *[other] Exported { $count } media files
+    }
+exporting-note-exported =
+    { $count ->
+        [one] { $count } note exported.
+       *[other] { $count } notes exported.
+    }
+exporting-exporting-file = Exporting file...
+exporting-processed-media-files =
+    { $count ->
+        [one] Processed { $count } media file...
+       *[other] Processed { $count } media files...
+    }
+exporting-include-deck = Include deck name
+exporting-include-notetype = Include note type name
+exporting-include-guid = Include unique identifier

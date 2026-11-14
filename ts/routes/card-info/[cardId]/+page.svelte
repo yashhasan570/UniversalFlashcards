@@ -1,0 +1,29 @@
+<!--
+Copyright: Universal Flashcards Software, LLC and contributors
+License: GNU AGPL, version 3 or later; http://www.gnu.org/licenses/agpl.html
+-->
+<script lang="ts">
+    import { page } from "$app/state";
+
+    import CardInfo from "../CardInfo.svelte";
+    import type { PageData } from "./$types";
+    import { goto, invalidate } from "$app/navigation";
+
+    export let data: PageData;
+
+    const showRevlog = page.url.searchParams.get("revlog") !== "0";
+
+    globalThis.universalflashcards ||= {};
+    globalThis.universalflashcards.updateCard = async (card_id: string): Promise<void> => {
+        const path = `/card-info/${card_id}`;
+        if (page.params.cardId === card_id) {
+            await invalidate("universalflashcards:card-info");
+        } else {
+            await goto(path).catch(() => {
+                window.location.href = path;
+            });
+        }
+    };
+</script>
+
+<CardInfo stats={data.info} {showRevlog} />

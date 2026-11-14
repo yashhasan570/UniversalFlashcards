@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+ <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+
+   <mime-type type="application/x-colpkg">
+   <comment>Universal Flashcards collection package</comment>
+   <glob pattern="*.colpkg"/>
+   </mime-type>
+
+   <mime-type type="application/x-apkg">
+   <comment>Universal Flashcards deck package</comment>
+   <glob pattern="*.apkg"/>
+   </mime-type>
+
+   <mime-type type="application/vnd.universalflashcards">
+   <comment>Universal Flashcards deck package</comment>
+   <glob pattern="*.apkg"/>
+   </mime-type>
+
+   <mime-type type="application/x-universalflashcardsaddon">
+   <comment>Universal Flashcards add-on package</comment>
+   <glob pattern="*.universalflashcardsaddon"/>
+   </mime-type>
+
+ </mime-info>

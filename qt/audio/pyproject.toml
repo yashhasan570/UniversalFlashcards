@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "universalflashcards-audio"
+dynamic = ["version"]
+description = "Audio binaries (mpv, lame) for Universal Flashcards"
+requires-python = ">=3.10"
+license = { text = "GPL-2.0-or-later" }
+authors = [
+  { name = "Universal Flashcards Team" },
+]
+urls = { Homepage = "https://github.com/yashhasan570/UniversalFlashcards" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["anki_audio"]
+artifacts = ["anki_audio/*"]
+
+[tool.hatch.build.targets.wheel.macos]
+macos-max-compat = false
+
+[tool.hatch.build.hooks.custom]
+path = "hatch_build.py"
+
+[tool.hatch.version]
+source = "code"
+path = "./version.py"

@@ -1,0 +1,13 @@
+// Copyright: Universal Flashcards Software, LLC and contributors
+// License: GNU AGPL, version 3 or later; http://www.gnu.org/licenses/agpl.html
+
+import { promiseWithResolver } from "./promise";
+import { registerPackage } from "./runtime-require";
+
+const [loaded, uiResolve] = promiseWithResolver();
+
+registerPackage("universalflashcards/ui", {
+    loaded,
+});
+
+export { uiResolve };
