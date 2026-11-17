@@ -31,7 +31,3 @@ building the code, please see [Universal Flashcards betas](https://docs.ankiweb.
 ## License
 
 Universal Flashcards's license: [LICENSE](./LICENSE)
-
-## Contact
-
-Questions, problem reports or feedback? Reach us on Telegram: [@johnconstantine570](https://t.me/johnconstantine570)
