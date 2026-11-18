@@ -3,12 +3,12 @@
 
 syntax = "proto3";
 
-option java_multiple_files = true;
-
 package universalflashcards.collection;
 
 import "universalflashcards/generic.proto";
 import "universalflashcards/sync.proto";
+
+option java_multiple_files = true;
 
 service CollectionService {
   rpc CheckDatabase(generic.Empty) returns (CheckDatabaseResponse);

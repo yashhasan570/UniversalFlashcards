@@ -3,21 +3,20 @@
 
 syntax = "proto3";
 
-option java_multiple_files = true;
-
 package universalflashcards.frontend;
 
-import "universalflashcards/scheduler.proto";
 import "universalflashcards/generic.proto";
-import "universalflashcards/search.proto";
+import "universalflashcards/links.proto";
 import "universalflashcards/notes.proto";
 import "universalflashcards/notetypes.proto";
-import "universalflashcards/links.proto";
+import "universalflashcards/scheduler.proto";
+import "universalflashcards/search.proto";
+
+option java_multiple_files = true;
 
 service FrontendService {
   // Returns values from the reviewer
-  rpc GetSchedulingStatesWithContext(generic.Empty)
-      returns (SchedulingStatesWithContext);
+  rpc GetSchedulingStatesWithContext(generic.Empty) returns (SchedulingStatesWithContext);
   // Updates reviewer state
   rpc SetSchedulingStates(SetSchedulingStatesRequest) returns (generic.Empty);
 
@@ -32,8 +31,7 @@ service FrontendService {
   rpc deckOptionsReady(generic.Empty) returns (generic.Empty);
 
   // Editor
-  rpc ConvertPastedImage(ConvertPastedImageRequest)
-      returns (ConvertPastedImageResponse);
+  rpc ConvertPastedImage(ConvertPastedImageRequest) returns (ConvertPastedImageResponse);
   rpc OpenFilePicker(openFilePickerRequest) returns (generic.String);
   rpc OpenMedia(generic.String) returns (generic.Empty);
   rpc ShowInMediaFolder(generic.String) returns (generic.Empty);

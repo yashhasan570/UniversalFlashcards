@@ -3,12 +3,12 @@
 
 syntax = "proto3";
 
-option java_multiple_files = true;
-
 package universalflashcards.config;
 
-import "universalflashcards/generic.proto";
 import "universalflashcards/collection.proto";
+import "universalflashcards/generic.proto";
+
+option java_multiple_files = true;
 
 service ConfigService {
   rpc GetConfigJson(generic.String) returns (generic.Json);
