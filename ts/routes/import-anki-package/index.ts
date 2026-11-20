@@ -7,7 +7,7 @@ import { getImportUniversalFlashcardsPackagePresets } from "@generated/backend";
 import { ModuleName, setupI18n } from "@tslib/i18n";
 import { checkNightMode } from "@tslib/nightmode";
 
-import { modalsKey } from "$lib/components/context-keys";
+import { modalsKey } from "#lib/components/context-keys.js";
 
 import ImportUniversalFlashcardsPackagePage from "./ImportUniversalFlashcardsPackagePage.svelte";
 

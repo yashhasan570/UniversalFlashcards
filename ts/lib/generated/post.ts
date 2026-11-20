@@ -40,7 +40,7 @@ async function postProtoInner(
     const result = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/binary", "Universal Flashcards-Op-Changes": opChangesType.toString() },
-        body,
+        body: body as Uint8Array<ArrayBuffer>,
         signal,
     });
     if (!result.ok) {

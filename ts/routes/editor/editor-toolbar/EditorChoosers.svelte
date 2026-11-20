@@ -4,8 +4,8 @@ License: GNU AGPL, version 3 or later; http://www.gnu.org/licenses/agpl.html
 -->
 
 <script lang="ts">
-    import NotetypeChooser from "$lib/components/NotetypeChooser.svelte";
-    import DeckChooser from "$lib/components/DeckChooser.svelte";
+    import NotetypeChooser from "#lib/components/NotetypeChooser.svelte";
+    import DeckChooser from "#lib/components/DeckChooser.svelte";
     import type { NotetypeNameId } from "@generated/universalflashcards/notetypes_pb";
     import type { DeckNameId } from "@generated/universalflashcards/decks_pb";
     import * as tr from "@generated/ftl";
